@@ -11,7 +11,7 @@ public class App {
     public static void run(LinkedList list){
 
         String result = flipCoin();
-        System.out.print("Last Result: " + result);
+        System.out.print("\tLast Result: " + result);
         LinkedList.insert(list, result);
         LinkedList.printList(list);
     }
@@ -45,10 +45,10 @@ public class App {
 
         int limit = getInput();
         for(int i = 0; i < limit; i++){
-            System.out.println("Totally " + i + " coin(s) flipped.");
+            clearBash();
+            System.out.println("Totally " + (i + 1) + " coin(s) flipped.");
             run(llist);
             Thread.sleep(1000);
-            clearBash();
         }
     }
 }
